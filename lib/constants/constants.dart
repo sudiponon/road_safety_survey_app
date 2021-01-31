@@ -118,6 +118,22 @@ String text_qsn29a="A lot times";
 String text_qsn29b="Sometimes";
 String text_qsn29c="Never";
 
+String text_qsn30a ="Heavy traffic jams";
+String text_qsn30b ="Crowds on footpaths";
+String text_qsn30c ="Improper traffic lights";
+String text_qsn30d ="Open drains on road";
+String text_qsn30e ="People don’t follow traffic rules";
+String text_qsn30f ="Dangerous road crossings";
+String text_qsn30g ="Sky bridges";
+String text_qsn30h ="No separate lane";
+String text_qsn30i ="Other:";
+
+String text_qsn31a ="I don't find red light";
+String text_qsn31b ="Vehicles stop at zebra crossing, so there is no space on road to cross";
+String text_qsn31c ="No vehicles stop to let us cross";
+String text_qsn31d ="Roads are very crowded and no one gives space";
+String text_qsn31e ="Other:";
+
 String text_qsn32a="Yes";
 String text_qsn32b="No";
 

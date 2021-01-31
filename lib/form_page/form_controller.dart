@@ -84,6 +84,22 @@ class FormViewController extends Controller {
   bool qsn27d = false;
   bool qsn27e = false;
 
+  bool qsn30a = false;
+  bool qsn30b = false;
+  bool qsn30c = false;
+  bool qsn30d = false;
+  bool qsn30e = false;
+  bool qsn30f = false;
+  bool qsn30g = false;
+  bool qsn30h = false;
+  bool qsn30i = false;
+
+  bool qsn31a = false;
+  bool qsn31b = false;
+  bool qsn31c = false;
+  bool qsn31d = false;
+  bool qsn31e = false;
+
   int groupValue11 = -1;
   String qsn11Answer;
 
@@ -120,11 +136,17 @@ class FormViewController extends Controller {
   int groupValue32 = -1;
   String qsn32Answer;
 
+  int groupValue33 = -1;
+
   int groupValue34 = -1;
   String qsn34Answer;
 
   int groupValue35 = -1;
   String qsn35Answer;
+
+  int groupValue37 = -1;
+
+  int groupValue38 = -1;
 
   int groupValue39 = -1;
   String qsn39Answer;
@@ -180,6 +202,8 @@ class FormViewController extends Controller {
   TextEditingController qsn26Controller = new TextEditingController();
 
   TextEditingController qsn27Controller = new TextEditingController();
+  TextEditingController qsn30Controller = new TextEditingController();
+  TextEditingController qsn31Controller = new TextEditingController();
 
   TextEditingController qsn35Controller = new TextEditingController();
 

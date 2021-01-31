@@ -19,9 +19,14 @@ import 'package:road_safety_survey/form_page/wdgets/question_six.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_sixteen.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_ten.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_thirteen.dart';
+import 'package:road_safety_survey/form_page/wdgets/question_thirty.dart';
+import 'package:road_safety_survey/form_page/wdgets/question_thirtyeight.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_thirtyfive.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_thirtyfour.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_thirtynine.dart';
+import 'package:road_safety_survey/form_page/wdgets/question_thirtyone.dart';
+import 'package:road_safety_survey/form_page/wdgets/question_thirtyseven.dart';
+import 'package:road_safety_survey/form_page/wdgets/question_thirtythree.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_thirtytwo.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_twelve.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_twenty.dart';
@@ -228,8 +233,9 @@ class FormViewState extends ViewState<FormView, FormViewController> {
                     // });
                     // }, ),
                     QuestionFive(),
-
                     controller.groupValue5==0?questionSixtoTwenty():Container(),
+                    controller.groupValue5==0 || controller.groupValue5==1?questionTwentytoThirtyFour():Container(),
+                    controller.groupValue5 ==0 || controller.groupValue5==1 || controller.groupValue5==2?questionThirtyFiveAbove():Container(),
                     Container(
                       height: 45,
                       width: double.infinity,
@@ -305,6 +311,17 @@ class FormViewState extends ViewState<FormView, FormViewController> {
           QuestionSeventeen(),
           QuestionEighteen(),
           QuestionNineteen(),
+
+
+        ],
+      ),
+    );
+  }
+  Widget questionTwentytoThirtyFour(){
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           QuestionTwenty(),
           QuestionTwentyThree(),
           QuestionTwentyFour(),
@@ -313,13 +330,27 @@ class FormViewState extends ViewState<FormView, FormViewController> {
           QuestionTwentySeven(),
           QuestionTwentyEight(),
           QuestionTwentyNine(),
+          QuestionThirty(),
+          QuestionThirtyOne(),
           QuestionThirtyTwo(),
+          QuestionThirtyThree(),
           QuestionThirtyFour(),
+        ],
+      ),
+    );
+  }
+
+  questionThirtyFiveAbove() {
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           QuestionThirtyFive(),
+          QuestionThirtySeven(),
+          QuestionThirtyEight(),
           QuestionThirtyNine(),
           QuestionForty(),
           QuestionFortyOne(),
-
         ],
       ),
     );
