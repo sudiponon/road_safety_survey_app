@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
 import 'package:road_safety_survey/constants/constants.dart';
+import 'package:road_safety_survey/database/db_helpers.dart';
+import 'package:road_safety_survey/model/uer_model.dart';
 
 class FormViewController extends Controller {
+
+  Future<List<User>> employees;
+  var dbHelper;
+  bool isUpdating;
+  int curUserId;
+
   int groupValue4 = -1;
   String qsn4Answer;
 
@@ -218,6 +226,8 @@ class FormViewController extends Controller {
     nameController = new TextEditingController();
     phoneController = new TextEditingController();
     ageController = new TextEditingController();
+    dbHelper = DBHelper();
+    isUpdating = false;
     // TODO: implement onInitState
     super.onInitState();
   }
@@ -692,7 +702,39 @@ class FormViewController extends Controller {
 
   }
 
-  void saveFormData() {}
+  void saveFormData() {
+    User e = User(curUserId, 
+      nameController.text, 
+      phoneController.text,
+      ageController.text,
+      qsn4Answer,
+      qsn5Answer,
+        qsn6Answer,
+        qsn11Answer,
+        qsn12Answer,
+        qsn13Answer,
+        qsn15Answer ,
+            qsn16Answer ,
+            qsn17Answer ,
+            qsn20Answer ,
+            qsn25Answer ,
+            qsn26Answer ,
+            qsn28Answer ,
+            qsn29Answer ,
+            qsn32Answer ,
+            groupValue33 ,
+            qsn34Answer ,
+            qsn35Answer ,
+            groupValue37 ,
+            groupValue38 ,
+            qsn39Answer ,
+            qsn40Answer ,
+            qsn41Answer ,
+      
+    );
+    dbHelper.save(e);
+    print("save successful");
+  }
 
   void deleteFormData() {}
 

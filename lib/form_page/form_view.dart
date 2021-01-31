@@ -241,12 +241,7 @@ class FormViewState extends ViewState<FormView, FormViewController> {
                       width: double.infinity,
                       child: FlatButton(
                           color: colorLightPurple,
-                          onPressed: () {
-                            // print(nameController.text);
-                            // print(phoneController.text);
-                            // print(ageController.text);
-                            // print(qsn4Controller.text);
-                          },
+                          onPressed: controller.saveFormData,
                           child: Text(
                             "Submit",
                             style: TextStyle(color: Colors.white, fontSize: 18),
