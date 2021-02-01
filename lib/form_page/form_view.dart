@@ -37,6 +37,7 @@ import 'package:road_safety_survey/form_page/wdgets/question_twentynine.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_twentyseven.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_twentysix.dart';
 import 'package:road_safety_survey/form_page/wdgets/question_twentythree.dart';
+import 'package:road_safety_survey/model/uer_model.dart';
 import 'package:road_safety_survey/widgets/app_text.dart';
 import 'package:road_safety_survey/widgets/app_text_form_field.dart';
 
@@ -155,7 +156,17 @@ class FormViewState extends ViewState<FormView, FormViewController> {
         centerTitle: true,
         backgroundColor: baseColor,
       ),
-      body: getMain());
+      body: getMain()
+    // body: FutureBuilder(
+    //   builder: (context, controller.testUsers) {
+    //   return ListView.builder(
+    //     itemCount: controller.testUsers.length,
+    //       itemBuilder: (context, index){
+    //         return CustomCard(controller.testUsers,index);
+    //       }),
+    // ),
+  );
+  
 
   Widget getMain() {
     return ControlledWidgetBuilder<FormViewController>(builder: (context, controller) {
@@ -346,6 +357,23 @@ class FormViewState extends ViewState<FormView, FormViewController> {
           QuestionThirtyNine(),
           QuestionForty(),
           QuestionFortyOne(),
+        ],
+      ),
+    );
+  }
+
+  Widget CustomCard(testUser, int index) {
+    return Container(
+      height: 200,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Colors.grey,
+      ),
+      child: Column(
+        children: [
+          Text(testUser[index].name),
+          Text(testUser[index].phone),
+          Text(testUser[index].age),
         ],
       ),
     );

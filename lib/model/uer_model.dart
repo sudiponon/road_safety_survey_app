@@ -107,11 +107,11 @@ class User{
         qsn28Answer = map['qsn28Answer'];
         qsn29Answer = map['qsn29Answer'];
         qsn32Answer = map['qsn32Answer'];
-        groupValue33 = map['groupValue33'];
+        groupValue33 = int.parse(map['groupValue33']);
         qsn34Answer = map['qsn34Answer'];
         qsn35Answer = map['qsn35Answer'];
-        groupValue37 = map['groupValue37'];
-        groupValue38 = map['groupValue38'];
+        groupValue37 = int.parse(map['groupValue37']);
+        groupValue38 = int.parse(map['groupValue38']);
         qsn39Answer = map['qsn39Answer'];
         qsn40Answer = map['qsn40Answer'];
         qsn41Answer = map['qsn41Answer'];

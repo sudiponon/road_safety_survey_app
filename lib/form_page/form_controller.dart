@@ -6,7 +6,10 @@ import 'package:road_safety_survey/model/uer_model.dart';
 
 class FormViewController extends Controller {
 
-  Future<List<User>> employees;
+  Future<List<User>> user;
+
+  List<User> testUsers;
+
   var dbHelper;
   bool isUpdating;
   int curUserId;
@@ -228,6 +231,7 @@ class FormViewController extends Controller {
     ageController = new TextEditingController();
     dbHelper = DBHelper();
     isUpdating = false;
+    getFormData();
     // TODO: implement onInitState
     super.onInitState();
   }
@@ -699,7 +703,21 @@ class FormViewController extends Controller {
   }
 
   void getFormData() {
-
+    user = dbHelper.getUsers();
+    user.then((value)  { print(value[0].name);
+    testUsers = value;
+    // nameController.text = value[0].name;
+    // print(value[0].groupValue33);
+    // groupValue33 = value[0].groupValue33;
+    value.forEach((element) {
+      nameController.text = element.name;
+      phoneController.text = element.phone;
+      ageController.text = element.age;
+    });
+    refreshUI();
+    });
+    // user.then((value) => value['name']);
+    print(user);
   }
 
   void saveFormData() {
